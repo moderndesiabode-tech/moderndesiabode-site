@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Desi Abode | Intentional Living & Heritage Fusion</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: {
+                            50: '#FCF9F5',
+                            100: '#F9F4EC',
+                            200: '#F3EADF',
+                            300: '#E7DCce',
+                        },
+                        terracotta: {
+                            500: '#C86543',
+                            600: '#B35D3B',
+                            700: '#924627',
+                        },
+                        brass: {
+                            400: '#D4AF37',
+                            500: '#C59B27',
+                            600: '#A07C1C',
+                            700: '#7D6114',
+                        },
+                        umber: {
+                            800: '#3D3028',
+                            900: '#2B211B',
+                            950: '#1D1612',
+                        },
+                        sand: '#DFD5C6',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FCF9F5;
+            color: #2B211B;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-editorial {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        /* Jali lattice pattern overlay for traditional atmospheric texture */
+        .bg-jali-pattern {
+            background-image: radial-gradient(#C59B27 0.75px, transparent 0.75px), radial-gradient(#C59B27 0.75px, #FCF9F5 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            opacity: 0.08;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F9F4EC;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B35D3B;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-terracotta-500/20 selection:text-terracotta-700">
+
+    <!-- Sticky Navigation Header -->
+    <header id="navbar" class="sticky top-0 z-40 bg-cream-50/95 backdrop-blur-md border-b border-sand/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Identity -->
+                <a href="#" class="flex flex-col group">
+                    <span class="font-editorial text-2xl sm:text-3xl font-semibold tracking-wide text-umber-900 group-hover:text-terracotta-600 transition-colors">
+                        MODERN DESI ABODE
+                    </span>
+                    <span class="text-[10px] uppercase tracking-[0.3em] text-brass-600 font-semibold -mt-1">
+                        Intentional Living &bull; Heritage Grounded
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide text-umber-800">
+                    <a href="#philosophy" class="hover:text-terracotta-600 transition-colors">The Ethos</a>
+                    <a href="#stories" class="hover:text-terracotta-600 transition-colors">Stories &amp; Styling</a>
+                    <a href="#curated" class="hover:text-terracotta-600 transition-colors">Curated Accents</a>
+                    <a href="#artisan-drop" class="text-terracotta-600 hover:text-terracotta-700 flex items-center gap-1.5 font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-terracotta-600 animate-pulse"></span>
+                        Rajasthani Drop
+                    </a>
+                </nav>
+
+                <!-- Action CTA & Mobile Toggle -->
+                <div class="flex items-center space-x-4">
+                    <a href="#artisan-drop" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-cream-50 bg-umber-900 hover:bg-terracotta-600 transition-all shadow-sm">
+                        Artisan Waitlist
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-umber-900 rounded-lg hover:bg-sand/50" aria-label="Toggle navigation">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-sand/70 bg-cream-50 px-6 pt-4 pb-6 space-y-3">
+            <a href="#philosophy" class="block py-2 text-base font-medium text-umber-900 hover:text-terracotta-600 mobile-nav-link">The Ethos</a>
+            <a href="#stories" class="block py-2 text-base font-medium text-umber-900 hover:text-terracotta-600 mobile-nav-link">Stories &amp; Styling Notes</a>
+            <a href="#curated" class="block py-2 text-base font-medium text-umber-900 hover:text-terracotta-600 mobile-nav-link">Curated Accents</a>
+            <a href="#artisan-drop" class="block py-2 text-base font-semibold text-terracotta-600 hover:text-terracotta-700 mobile-nav-link">Rajasthani Artisan Drop (Coming Soon)</a>
+            <a href="#artisan-drop" class="block w-full text-center py-3 mt-2 rounded-full text-sm font-semibold uppercase tracking-wider text-cream-50 bg-umber-900 hover:bg-terracotta-600 mobile-nav-link">
+                Join VIP Waitlist
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32 bg-cream-100">
+        <div class="absolute inset-0 bg-jali-pattern pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <!-- Text Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sand/60 border border-sand text-xs font-semibold tracking-wider uppercase text-umber-800">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brass-500"></i>
+                        The Convergence of Modern Sanctuaries &amp; Indian Craft
+                    </div>
+                    
+                    <h1 class="font-editorial text-4xl sm:text-6xl lg:text-7xl font-normal leading-[1.08] text-umber-950">
+                        Sanctuary In Simplicity, <br class="hidden sm:inline" />
+                        <span class="italic font-light text-terracotta-600">Soul In Heritage.</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-umber-800/85 max-w-xl font-normal leading-relaxed">
+                        We believe a modern Indian home shouldn't choose between sterile cold minimalism and overwhelming festive clutter. We bring you hand-hammered brass urlis, warm carved sheesham, and natural Bagru textiles—placed with deliberate breathability in modern spaces.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+                        <a href="#stories" class="inline-flex justify-center items-center gap-2 px-7 py-3.5 rounded-full bg-umber-900 text-cream-50 font-medium text-sm hover:bg-terracotta-600 transition-all shadow-md group">
+                            <span>Read Stories &amp; Room Guides</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#artisan-drop" class="inline-flex justify-center items-center gap-2 px-7 py-3.5 rounded-full bg-cream-200 border border-sand text-umber-900 font-medium text-sm hover:bg-sand/60 transition-all">
+                            <i data-lucide="package-search" class="w-4 h-4 text-brass-600"></i>
+                            <span>Preview Rajasthani Drop</span>
+                        </a>
+                    </div>
+
+                    <!-- Highlight Badges -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-sand/80 max-w-lg">
+                        <div>
+                            <p class="font-editorial text-2xl sm:text-3xl font-semibold text-umber-900">Brass &amp; Teak</p>
+                            <p class="text-xs text-brass-600 font-medium">Warm Patinated Metals</p>
+                        </div>
+                        <div>
+                            <p class="font-editorial text-2xl sm:text-3xl font-semibold text-umber-900">Negative Space</p>
+                            <p class="text-xs text-brass-600 font-medium">Restrained Aesthetic</p>
+                        </div>
+                        <div>
+                            <p class="font-editorial text-2xl sm:text-3xl font-semibold text-umber-900">Rajasthani</p>
+                            <p class="text-xs text-brass-600 font-medium">Generational Handcraft</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual: Rich Desi Artifact Vignette -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="overflow-hidden rounded-2xl shadow-2xl bg-cream-50 border border-sand">
+                            <div class="relative aspect-[4/5] overflow-hidden">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1000&q=80" 
+                                    alt="Carved vintage Indian architectural door in warm sanctuary setting" 
+                                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                                    onerror="this.src='https://images.unsplash.com/photo-1544457070-4cd773b4d71e?auto=format&fit=crop&w=1000&q=80'"
+                                />
+                                <div class="absolute inset-0 bg-gradient-to-t from-umber-950/80 via-umber-950/20 to-transparent"></div>
+                                
+                                <div class="absolute bottom-6 left-6 right-6 text-cream-50">
+                                    <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-cream-50/20 backdrop-blur-md text-[11px] font-semibold tracking-wider uppercase mb-2 text-brass-400">
+                                        <i data-lucide="flame" class="w-3.5 h-3.5 text-terracotta-500"></i>
+                                        Styling Note No. 08
+                                    </div>
+                                    <h2 class="font-editorial text-2xl sm:text-3xl font-normal leading-snug">
+                                        Hand-Carved Architectural Panels Meets Limewash Walls
+                                    </h2>
+                                    <p class="text-xs text-cream-100/80 mt-1 line-clamp-2">
+                                        The warmth of weathered sheesham timber juxtaposed with quiet textured oat-colored plaster.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Heritage Stamp -->
+                        <div class="absolute -bottom-6 -left-6 bg-cream-50 p-4 rounded-xl shadow-lg border border-sand hidden sm:flex items-center gap-3.5 max-w-xs">
+                            <div class="w-12 h-12 rounded-lg bg-terracotta-500/10 flex items-center justify-center text-terracotta-600 flex-shrink-0">
+                                <i data-lucide="flower2" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-umber-900">Slow Handcrafted Goods</p>
+                                <p class="text-[11px] text-brass-600">Pure cast bell metal, unlacquered brass &amp; terracotta</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="py-20 bg-cream-200/60 border-y border-sand/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-4">
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-terracotta-600">The Abode Ethos</span>
+                <h2 class="font-editorial text-3xl sm:text-5xl font-normal text-umber-900">
+                    Why Modern Desi?
+                </h2>
+                <p class="text-umber-800/80 text-base sm:text-lg leading-relaxed">
+                    Most Indian households navigate an unspoken tug-of-war: we admire the serene clean lines of contemporary interior design, yet sterile rooms leave our souls craving the warm nostalgia of brass oil lamps, hand-printed linens, and raw timber. <strong>Modern Desi Abode</strong> exists to curate the intentional middle ground.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                <!-- Pillar 1 -->
+                <div class="bg-cream-50 p-8 rounded-2xl border border-sand hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-terracotta-500/10 flex items-center justify-center text-terracotta-600 mb-6">
+                        <i data-lucide="layers" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-editorial text-2xl font-semibold text-umber-900 mb-2">Architectural Stillness</h3>
+                    <p class="text-sm text-umber-800/75 leading-relaxed">
+                        Rather than crowding every surface with knick-knacks, we select one commanding artisanal piece and surround it with generous negative space.
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-cream-50 p-8 rounded-2xl border border-sand hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-brass-500/10 flex items-center justify-center text-brass-600 mb-6">
+                        <i data-lucide="flame" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-editorial text-2xl font-semibold text-umber-900 mb-2">Living Patinas</h3>
+                    <p class="text-sm text-umber-800/75 leading-relaxed">
+                        We celebrate living materials that tell stories—unlacquered brass that naturally ages, hand-thrown clay, and vegetable-dyed block prints.
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-cream-50 p-8 rounded-2xl border border-sand hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-terracotta-500/10 flex items-center justify-center text-terracotta-600 mb-6">
+                        <i data-lucide="heart" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-editorial text-2xl font-semibold text-umber-900 mb-2">Artisan Lineage</h3>
+                    <p class="text-sm text-umber-800/75 leading-relaxed">
+                        Direct respect for artisan clusters in Jodhpur, Bagru, and Jaipur—transforming ancestral skills into functional everyday home design.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stories & Styling Notes (Formerly Editorial Journal) -->
+    <section id="stories" class="py-24 bg-cream-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Clear explanation banner of what this section is -->
+            <div class="max-w-3xl mb-12">
+                <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-brass-600 mb-2">
+                    <i data-lucide="book-open" class="w-4 h-4"></i>
+                    Stories &amp; Styling Notes
+                </div>
+                <h2 class="font-editorial text-3xl sm:text-5xl font-normal text-umber-900 leading-tight">
+                    Living With Heritage in Modern Homes
+                </h2>
+                <!-- Clarifying note explaining the purpose of this section -->
+                <p class="text-sm sm:text-base text-umber-800/80 mt-3 leading-relaxed">
+                    <strong>What are these notes?</strong> Instead of detached design theories, our styling notes are step-by-step guides and thoughtful essays written for real homes. We explore how to welcome treasured Indian heirlooms—from heavy brass urlis to mirrorwork tapestries—into clean modern apartments without clutter or visual fatigue.
+                </p>
+            </div>
+
+            <!-- Filter Categories -->
+            <div class="flex flex-wrap items-center gap-2 text-xs font-semibold mb-10" id="journal-filter-container">
+                <button class="filter-btn px-4 py-2 rounded-full border border-umber-900 bg-umber-900 text-cream-50 transition-all" data-category="all">
+                    All Stories
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-sand bg-cream-50 text-umber-800 hover:border-terracotta-600 transition-all" data-category="brass">
+                    Brass &amp; Metal Accents
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-sand bg-cream-50 text-umber-800 hover:border-terracotta-600 transition-all" data-category="rajasthani">
+                    Rajasthani Wood &amp; Inlay
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full border border-sand bg-cream-50 text-umber-800 hover:border-terracotta-600 transition-all" data-category="textiles">
+                    Handloom &amp; Textiles
+                </button>
+            </div>
+
+            <!-- Blog Post Grid with Rich Indian Traditional Imagery -->
+            <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Article 1: Brass Urli in Modern Foyer -->
+                <article class="article-card group bg-cream-50 rounded-2xl overflow-hidden border border-sand flex flex-col hover:shadow-xl transition-all duration-300" data-category="brass">
+                    <div class="relative aspect-[16/11] overflow-hidden bg-cream-200">
+                        <!-- High-resolution brass urli / traditional diya setting with water and marigolds -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?auto=format&fit=crop&w=900&q=80" 
+                            alt="Handcrafted brass urli with floating marigolds and water in an entrance foyer" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            onerror="this.src='https://images.unsplash.com/photo-1544457070-4cd773b4d71e?auto=format&fit=crop&w=800&q=80'"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-umber-950/60 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-cream-50/95 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase text-umber-900 border border-sand">
+                            Brass &amp; Metal Accents
+                        </span>
+                        <div class="absolute bottom-3 left-4 text-cream-50 text-xs font-medium flex items-center gap-1.5">
+                            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brass-400"></i>
+                            Kerala &amp; Thanjavur Metalcraft
+                        </div>
+                    </div>
+                    <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2.5 text-xs text-brass-600 mb-2 font-medium">
+                                <span>Styling Guide</span>
+                                <span>&bull;</span>
+                                <span>6 Min Read</span>
+                            </div>
+                            <h3 class="font-editorial text-2xl font-medium text-umber-900 group-hover:text-terracotta-600 transition-colors line-clamp-2">
+                                Styling an Antique Brass Urli in a Contemporary Foyer
+                            </h3>
+                            <p class="text-sm text-umber-800/75 mt-3 line-clamp-3 leading-relaxed">
+                                Avoid the festive trap of overdecorating. Learn how a single patinated Kerala brass urli on an off-white travertine pedestal becomes a serene daily sensory anchor for your modern entryway.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-sand/70 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-umber-900">By Ananya Mehta</span>
+                            <button onclick="openArticleModal(1)" class="text-xs font-bold text-terracotta-600 hover:text-terracotta-700 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                                Read Guide <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2: Rajasthani Jharokhas & Thikri Mirror Inlay -->
+                <article class="article-card group bg-cream-50 rounded-2xl overflow-hidden border border-sand flex flex-col hover:shadow-xl transition-all duration-300" data-category="rajasthani">
+                    <div class="relative aspect-[16/11] overflow-hidden bg-cream-200">
+                        <!-- Intricate Rajasthani carved wooden arch / jharokha motif -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?auto=format&fit=crop&w=900&q=80" 
+                            alt="Rajasthani carved wooden jharokha architecture and mirror reflections" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            onerror="this.src='https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80'"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-umber-950/60 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-cream-50/95 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase text-umber-900 border border-sand">
+                            Rajasthani Wood &amp; Inlay
+                        </span>
+                        <div class="absolute bottom-3 left-4 text-cream-50 text-xs font-medium flex items-center gap-1.5">
+                            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brass-400"></i>
+                            Jodhpur &amp; Shekhawati
+                        </div>
+                    </div>
+                    <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2.5 text-xs text-brass-600 mb-2 font-medium">
+                                <span>Architectural Note</span>
+                                <span>&bull;</span>
+                                <span>8 Min Read</span>
+                            </div>
+                            <h3 class="font-editorial text-2xl font-medium text-umber-900 group-hover:text-terracotta-600 transition-colors line-clamp-2">
+                                Thikri Mirror Work &amp; Carved Jharokhas on Modern Limewash
+                            </h3>
+                            <p class="text-sm text-umber-800/75 mt-3 line-clamp-3 leading-relaxed">
+                                How royal Rajasthani convex mirror mosaics and distressed carved arches catch afternoon sunlight inside minimalist apartments when paired with quiet, tactile earth plaster walls.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-sand/70 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-umber-900">By Rohan Singhania</span>
+                            <button onclick="openArticleModal(2)" class="text-xs font-bold text-terracotta-600 hover:text-terracotta-700 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                                Read Guide <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3: Sanganeri & Bagru Block Prints on Belgian Linen -->
+                <article class="article-card group bg-cream-50 rounded-2xl overflow-hidden border border-sand flex flex-col hover:shadow-xl transition-all duration-300" data-category="textiles">
+                    <div class="relative aspect-[16/11] overflow-hidden bg-cream-200">
+                        <!-- Authentic Indian hand-block printing textile motif & carved printing blocks -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=900&q=80" 
+                            alt="Traditional hand-block printed Indian botanical textiles with warm earth dyes" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            onerror="this.src='https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?auto=format&fit=crop&w=800&q=80'"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-umber-950/60 via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-cream-50/95 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase text-umber-900 border border-sand">
+                            Handloom &amp; Textiles
+                        </span>
+                        <div class="absolute bottom-3 left-4 text-cream-50 text-xs font-medium flex items-center gap-1.5">
+                            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brass-400"></i>
+                            Bagru &amp; Sanganer, Rajasthan
+                        </div>
+                    </div>
+                    <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2.5 text-xs text-brass-600 mb-2 font-medium">
+                                <span>Textile Mastery</span>
+                                <span>&bull;</span>
+                                <span>10 Min Read</span>
+                            </div>
+                            <h3 class="font-editorial text-2xl font-medium text-umber-900 group-hover:text-terracotta-600 transition-colors line-clamp-2">
+                                Layering Sanganeri Block Prints with Modern Belgian Linen
+                            </h3>
+                            <p class="text-sm text-umber-800/75 mt-3 line-clamp-3 leading-relaxed">
+                                The art of mixing natural indigo, kashish greys, and syahi black bootis onto heavy washed oatmeal linen throws. Warmth without visual chaos for Scandinavian or Japandi sofas.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-sand/70 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-umber-900">By Priya Varma</span>
+                            <button onclick="openArticleModal(3)" class="text-xs font-bold text-terracotta-600 hover:text-terracotta-700 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                                Read Guide <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curated & Recommended Artifacts Section -->
+    <section id="curated" class="py-24 bg-cream-200/50 border-t border-sand/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl mb-14">
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-terracotta-600">The Capsule Edit</span>
+                <h2 class="font-editorial text-3xl sm:text-5xl font-normal text-umber-900 mt-1">
+                    Curated Artifacts We Swear By
+                </h2>
+                <p class="text-sm sm:text-base text-umber-800/80 mt-3 leading-relaxed">
+                    Tested in our own sanctuaries. Handcrafted pieces that introduce authentic Indian soul while respecting modern negative space.
+                </p>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product Card 1: Brass Urli -->
+                <div class="product-card bg-cream-50 rounded-2xl border border-sand overflow-hidden flex flex-col justify-between group hover:shadow-lg transition-all">
+                    <div class="relative aspect-square overflow-hidden bg-sand/30">
+                        <img 
+                            src="https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?auto=format&fit=crop&w=600&q=80" 
+                            alt="Solid Cast Brass Hand-Hammered Urli" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            onerror="this.src='https://placehold.co/600x600/F3EADF/2B211B?text=Hand-Hammered+Brass+Urli'"
+                        />
+                        <div class="absolute top-3 left-3 bg-umber-900 text-cream-50 text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded">
+                            Foundation Piece
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-baseline justify-between mb-1">
+                                <span class="text-xs font-medium text-brass-600">Entryway &bull; Coffee Table</span>
+                                <span class="text-sm font-semibold text-umber-900">$165</span>
+                            </div>
+                            <h3 class="font-editorial text-xl font-medium text-umber-900 group-hover:text-terracotta-600 transition-colors">
+                                Hand-Cast Fluted Brass Urli Bowl
+                            </h3>
+                            <p class="text-xs text-umber-800/70 mt-2">
+                                Heavy untreated brass with flared petal rim. Aged patina that deepens gracefully over the years.
+                            </p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-sand/60">
+                            <button onclick="showStylingTips('Hand-Cast Fluted Brass Urli Bowl', 'Set this directly upon a matte raw-wood console or low modern stone coffee table. Fill with fresh water and float exactly 3 garden roses or fresh jasmine blossoms with a solitary beeswax candle.')" class="w-full py-2.5 rounded-lg border border-umber-900 text-xs font-semibold uppercase tracking-wider text-umber-900 hover:bg-umber-900 hover:text-cream-50 transition-colors">
+                                View Styling Notes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2: Teakwood Stool -->
+                <div class="product-card bg-cream-50 rounded-2xl border border-sand overflow-hidden flex flex-col justify-between group hover:shadow-lg transition-all">
+                    <div class="relative aspect-square overflow-hidden bg-sand/30">
+                        <img 
+                            src="https://images.unsplash.com/photo-1544457070-4cd773b4d71e?auto=format&fit=crop&w=600&q=80" 
+                            alt="Sculptural Solid Sheesham / Teakwood Pedestal" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            onerror="this.src='https://placehold.co/600x600/F3EADF/2B211B?text=Carved+Sheesham+Pedestal'"
+                        />
+                        <div class="absolute top-3 left-3 bg-terracotta-600 text-cream-50 text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded">
+                            Artisanal Teak
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-baseline justify-between mb-1">
+                                <span class="text-xs font-medium text-brass-600">Living Room &bull; Corner</span>
+                                <span class="text-sm font-semibold text-umber-900">$220</span>
+                            </div>
+                            <h3 class="font-editorial text-xl font-medium text-umber-900 group-hover:text-terracotta-600 transition-colors">
+                                Scalloped Sheesham Carved Pedestal
+                            </h3>
+                            <p class="text-xs text-umber-800/70 mt-2">
+                                Hand-carved scalloped arch silhouette inspired by classical Rajasthani pavilion columns.
+                            </p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-sand/60">
+                            <button onclick="showStylingTips('Scalloped Sheesham Carved Pedestal', 'Use as an accent side-table beside a tailored linen sofa. Its deep timber grains warm up pale walls, giving sculptural height to ceramics.')" class="w-full py-2.5 rounded-lg border border-umber-900 text-xs font-semibold uppercase tracking-wider text-umber-900 hover:bg-umber-900 hover:text-cream-50 transition-colors">
+                                View Styling Notes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3: Bagru Indigo Linen Throw -->
+                <div class="product-card bg-cream-50 rounded-2xl border border-sand overflow-hidden flex flex-col justify-between group hover:shadow-lg transition-all">
+                    <div class="relative aspect-square overflow-hidden bg-sand/30">
+                        <img 
+                            src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80" 
+                            alt="Bagru Dabu Block Print Organic Throw" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            onerror="this.src='https://placehold.co/600x600/F3EADF/2B211B?text=Bagru+Block+Print+Linen'"
+                        />
+                        <div class="absolute top-3 left-3 bg-brass-600 text-cream-50 text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded">
+                            Vegetable Dyed
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-baseline justify-between mb-1">
+                                <span class="text-xs font-medium text-brass-600">Textiles &bull; Bedroom</span>
+                                <span class="text-sm font-semibold text-umber-900">$98</span>
+                            </div>
+                            <h3 class="font-editorial text-xl font-medium text-umber-900 group-hover:text-terracotta-600 transition-colors">
+                                Dabu Mud-Resist Indigo Throw
+                            </h3>
+                            <p class="text-xs text-umber-800/70 mt-2">
+                                Authentic mud-resist block printing on unbleached textured cotton. Soft, tactile, and natural.
+                            </p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-sand/60">
+                            <button onclick="showStylingTips('Dabu Mud-Resist Indigo Throw', 'Fold lengthwise across the foot of a crisp off-white or beige bed. The rich mineral indigo adds instant character without dominating the calming palette.')" class="w-full py-2.5 rounded-lg border border-umber-900 text-xs font-semibold uppercase tracking-wider text-umber-900 hover:bg-umber-900 hover:text-cream-50 transition-colors">
+                                View Styling Notes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4: Terracotta & Bell Metal Chimes -->
+                <div class="product-card bg-cream-50 rounded-2xl border border-sand overflow-hidden flex flex-col justify-between group hover:shadow-lg transition-all">
+                    <div class="relative aspect-square overflow-hidden bg-sand/30">
+                        <img 
+                            src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80" 
+                            alt="Jaisalmer Yellow Stone & Copper Bell" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            onerror="this.src='https://placehold.co/600x600/F3EADF/2B211B?text=Copper+Bell+Metal+Accent'"
+                        />
+                        <div class="absolute top-3 left-3 bg-umber-900 text-cream-50 text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded">
+                            Kutch Acoustic
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-baseline justify-between mb-1">
+                                <span class="text-xs font-medium text-brass-600">Acoustic &bull; Balcony</span>
+                                <span class="text-sm font-semibold text-umber-900">$72</span>
+                            </div>
+                            <h3 class="font-editorial text-xl font-medium text-umber-900 group-hover:text-terracotta-600 transition-colors">
+                                Hand-Forged Coppered Ghanta Bell
+                            </h3>
+                            <p class="text-xs text-umber-800/70 mt-2">
+                                Traditional pastoral bell forged with raw copper and bronze dust with hand-turned wooden clapper.
+                            </p>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-sand/60">
+                            <button onclick="showStylingTips('Hand-Forged Coppered Ghanta Bell', 'Suspend near an open balcony window or reading nook. A gentle breeze produces a deep, resonant temple chime that centers the household.')" class="w-full py-2.5 rounded-lg border border-umber-900 text-xs font-semibold uppercase tracking-wider text-umber-900 hover:bg-umber-900 hover:text-cream-50 transition-colors">
+                                View Styling Notes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Rajasthani Handmade Decor Section ('The Artisan Collection - Coming Soon') -->
+    <section id="artisan-drop" class="py-24 bg-umber-950 text-cream-50 relative overflow-hidden">
+        <!-- Ambient Warm Glows -->
+        <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-terracotta-600/20 blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-brass-500/15 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream-50/10 border border-cream-50/20 text-xs font-bold uppercase tracking-widest text-brass-400 mb-3">
+                        <i data-lucide="bell" class="w-3.5 h-3.5 text-terracotta-500"></i>
+                        The Artisan Collection &bull; Drop No. 01
+                    </div>
+                    <h2 class="font-editorial text-4xl sm:text-6xl font-normal leading-tight">
+                        Handcrafted in Rajasthan, <br />
+                        <span class="text-terracotta-500 italic font-light">Direct From Village Master Craftsmen.</span>
+                    </h2>
+                    <p class="text-cream-200/70 text-base max-w-xl mt-4 leading-relaxed">
+                        We are currently collaborating with generational wood carvers in Jodhpur and metal-smiths in Jaipur. Micro-batches made with reclaimed timbers, cast bell metal, and pure earth dyes.
+                    </p>
+                </div>
+
+                <!-- Launch Countdown Timer Component -->
+                <div class="bg-umber-900/90 border border-sand/20 rounded-2xl p-6 sm:p-7 backdrop-blur-md">
+                    <p class="text-xs uppercase tracking-widest text-brass-400 font-semibold mb-4 text-center sm:text-left">
+                        Exclusive Drop Opens In:
+                    </p>
+                    <div class="grid grid-cols-4 gap-3 sm:gap-4 text-center">
+                        <div class="bg-umber-950/80 px-3 py-2.5 rounded-xl border border-white/5">
+                            <span id="countdown-days" class="font-editorial text-2xl sm:text-3xl font-bold text-cream-50">18</span>
+                            <span class="block text-[10px] uppercase tracking-wider text-cream-200/60 mt-0.5">Days</span>
+                        </div>
+                        <div class="bg-umber-950/80 px-3 py-2.5 rounded-xl border border-white/5">
+                            <span id="countdown-hours" class="font-editorial text-2xl sm:text-3xl font-bold text-cream-50">09</span>
+                            <span class="block text-[10px] uppercase tracking-wider text-cream-200/60 mt-0.5">Hours</span>
+                        </div>
+                        <div class="bg-umber-950/80 px-3 py-2.5 rounded-xl border border-white/5">
+                            <span id="countdown-minutes" class="font-editorial text-2xl sm:text-3xl font-bold text-cream-50">42</span>
+                            <span class="block text-[10px] uppercase tracking-wider text-cream-200/60 mt-0.5">Mins</span>
+                        </div>
+                        <div class="bg-umber-950/80 px-3 py-2.5 rounded-xl border border-white/5">
+                            <span id="countdown-seconds" class="font-editorial text-2xl sm:text-3xl font-bold text-cream-50">15</span>
+                            <span class="block text-[10px] uppercase tracking-wider text-cream-200/60 mt-0.5">Secs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Preview Items Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <!-- Drop Item 1 -->
+                <div class="rounded-2xl overflow-hidden bg-umber-900 border border-sand/20 group">
+                    <div class="aspect-[4/5] relative overflow-hidden bg-umber-800">
+                        <img 
+                            src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80" 
+                            alt="Hand-Carved Reclaimed Mango Wood Jharokha Mirror" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
+                            onerror="this.src='https://images.unsplash.com/photo-1544457070-4cd773b4d71e?auto=format&fit=crop&w=600&q=80'"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-umber-950 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span class="text-[10px] font-bold tracking-widest uppercase text-terracotta-500">Jodhpur Woodcraft</span>
+                            <h4 class="font-editorial text-lg text-cream-50 mt-1">Carved Arch Jharokha Mirror</h4>
+                            <p class="text-xs text-cream-200/70 mt-1">Reclaimed teak with natural matte beeswax finish.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drop Item 2 -->
+                <div class="rounded-2xl overflow-hidden bg-umber-900 border border-sand/20 group">
+                    <div class="aspect-[4/5] relative overflow-hidden bg-umber-800">
+                        <img 
+                            src="https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?auto=format&fit=crop&w=600&q=80" 
+                            alt="Jaipur Thikri Glass Inlay Tablet" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
+                            onerror="this.src='https://placehold.co/600x750/3D3028/FCF9F5?text=Thikri+Glass+Inlay'"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-umber-950 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span class="text-[10px] font-bold tracking-widest uppercase text-terracotta-500">Jaipur Glass Inlay</span>
+                            <h4 class="font-editorial text-lg text-cream-50 mt-1">Modern Thikri Wall Tablet</h4>
+                            <p class="text-xs text-cream-200/70 mt-1">Hand-cut convex mirrors embedded in lime plaster.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drop Item 3 -->
+                <div class="rounded-2xl overflow-hidden bg-umber-900 border border-sand/20 group">
+                    <div class="aspect-[4/5] relative overflow-hidden bg-umber-800">
+                        <img 
+                            src="https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?auto=format&fit=crop&w=600&q=80" 
+                            alt="Cast Bell Metal Temple Urli" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
+                            onerror="this.src='https://placehold.co/600x750/3D3028/FCF9F5?text=Bell+Metal+Urli'"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-umber-950 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span class="text-[10px] font-bold tracking-widest uppercase text-terracotta-500">Raw Bell Metal</span>
+                            <h4 class="font-editorial text-lg text-cream-50 mt-1">Sculptural Low Urli Vessel</h4>
+                            <p class="text-xs text-cream-200/70 mt-1">Heavy lost-wax cast brass with unlacquered finish.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drop Item 4 -->
+                <div class="rounded-2xl overflow-hidden bg-umber-900 border border-sand/20 group">
+                    <div class="aspect-[4/5] relative overflow-hidden bg-umber-800">
+                        <img 
+                            src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80" 
+                            alt="Bagru Dabu Block Print Bolsters" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
+                            onerror="this.src='https://placehold.co/600x750/3D3028/FCF9F5?text=Bagru+Bolsters'"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-umber-950 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <span class="text-[10px] font-bold tracking-widest uppercase text-terracotta-500">Bagru Natural Dyes</span>
+                            <h4 class="font-editorial text-lg text-cream-50 mt-1">Dabu Block-Print Bolsters</h4>
+                            <p class="text-xs text-cream-200/70 mt-1">Mud-resist indigo and harda yellow on heavy handspun cotton.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Waitlist Form Card -->
+            <div class="bg-gradient-to-br from-umber-900 via-umber-900 to-umber-850 rounded-3xl p-8 sm:p-12 border border-sand/30 shadow-2xl">
+                <div class="max-w-2xl mx-auto text-center space-y-4">
+                    <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-terracotta-500/20 text-terracotta-500 text-xs font-semibold uppercase tracking-wider">
+                        <i data-lucide="crown" class="w-3.5 h-3.5"></i>
+                        Priority Collector Circle
+                    </div>
+                    <h3 class="font-editorial text-3xl sm:text-4xl font-normal text-cream-50">
+                        Gain 24-Hour Advance Access to Drop No. 01
+                    </h3>
+                    <p class="text-cream-200/75 text-sm sm:text-base leading-relaxed">
+                        Because each item is manually chiselled, cast, and dyed, batches are capped at 25 numbered units per design. Register your email for the private catalog release.
+                    </p>
+
+                    <!-- Waitlist Form -->
+                    <form id="waitlist-form" class="mt-8 space-y-3 sm:space-y-0 sm:flex sm:items-center sm:gap-3 max-w-lg mx-auto" onsubmit="handleWaitlistSubmit(event)">
+                        <div class="relative flex-1">
+                            <input 
+                                type="email" 
+                                id="waitlist-email" 
+                                required 
+                                placeholder="Enter your email address" 
+                                class="w-full px-5 py-4 rounded-xl bg-umber-950/90 border border-sand/30 text-cream-50 placeholder-cream-200/40 text-sm focus:outline-none focus:border-terracotta-500 transition-colors"
+                            />
+                        </div>
+                        <button 
+                            type="submit" 
+                            id="waitlist-submit-btn" 
+                            class="w-full sm:w-auto px-7 py-4 rounded-xl bg-terracotta-600 hover:bg-terracotta-500 text-cream-50 font-semibold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 flex-shrink-0"
+                        >
+                            <span>Join Waitlist</span>
+                            <i data-lucide="sparkles" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+
+                    <!-- Feedback message box -->
+                    <div id="waitlist-feedback" class="hidden text-xs py-3 px-4 rounded-lg mt-3 bg-emerald-950/70 border border-emerald-500/40 text-emerald-300"></div>
+
+                    <p class="text-[11px] text-cream-200/50 mt-3">
+                        Strictly zero spam. You will only receive the collector link &amp; catalog 24 hours prior to launch.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="py-20 bg-cream-100 border-t border-sand/80">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <span class="text-xs font-bold uppercase tracking-[0.25em] text-brass-600">The Abode Sunday Post</span>
+            <h2 class="font-editorial text-3xl sm:text-5xl font-normal text-umber-900">
+                A Slow Fortnightly Letter on Heritage &amp; Space
+            </h2>
+            <p class="text-umber-800/80 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+                No noisy marketing. Just authentic sourcing travelogues from Jodhpur and Jaipur, room moodboards, and styling notes on creating calm modern Indian sanctuaries.
+            </p>
+
+            <form id="newsletter-form" class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto" onsubmit="handleNewsletterSubmit(event)">
+                <input 
+                    type="email" 
+                    id="newsletter-email" 
+                    required 
+                    placeholder="Your favorite email" 
+                    class="w-full px-5 py-3.5 rounded-full bg-cream-50 border border-sand text-umber-900 placeholder-umber-800/40 text-sm focus:outline-none focus:border-terracotta-600 transition-colors"
+                />
+                <button 
+                    type="submit" 
+                    class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-umber-900 hover:bg-terracotta-600 text-cream-50 font-medium text-xs uppercase tracking-wider transition-colors flex-shrink-0"
+                >
+                    Subscribe
+                </button>
+            </form>
+            <div id="newsletter-feedback" class="hidden text-xs py-2 px-3 rounded-lg max-w-md mx-auto"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-cream-200 border-t border-sand pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="space-y-3 md:col-span-2">
+                    <span class="font-editorial text-2xl font-bold tracking-wide text-umber-900">
+                        MODERN DESI ABODE
+                    </span>
+                    <p class="text-xs text-brass-600 uppercase tracking-widest font-semibold">
+                        curated with intention &bull; rooted in india
+                    </p>
+                    <p class="text-sm text-umber-800/75 max-w-md mt-2 leading-relaxed">
+                        Bridging timeless Indian craftsmanship with intentional contemporary architecture. An online home for thoughtful homemakers, slow design devotees, and heritage lovers.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-umber-900 mb-4">Explore</h4>
+                    <ul class="space-y-2.5 text-sm text-umber-800/80">
+                        <li><a href="#philosophy" class="hover:text-terracotta-600 transition-colors">The Ethos</a></li>
+                        <li><a href="#stories" class="hover:text-terracotta-600 transition-colors">Stories &amp; Room Guides</a></li>
+                        <li><a href="#curated" class="hover:text-terracotta-600 transition-colors">Curated Finds</a></li>
+                        <li><a href="#artisan-drop" class="hover:text-terracotta-600 transition-colors">Rajasthani Artisan Drop</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-umber-900 mb-4">Connect</h4>
+                    <ul class="space-y-2.5 text-sm text-umber-800/80">
+                        <li><a href="#" class="hover:text-terracotta-600 transition-colors">Instagram &bull; @moderndesiabode</a></li>
+                        <li><a href="#" class="hover:text-terracotta-600 transition-colors">Pinterest &bull; @moderndesiabode</a></li>
+                        <li><a href="#" class="hover:text-terracotta-600 transition-colors">Artisan Collaborations</a></li>
+                        <li><a href="#" class="hover:text-terracotta-600 transition-colors">Press &amp; Inquiries</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-sand/80 flex flex-col sm:flex-row items-center justify-between text-xs text-umber-800/60 gap-4">
+                <p>&copy; 2026 Modern Desi Abode (moderndesiabode.com). Handcrafted with pride.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-umber-900">Privacy Policy</a>
+                    <a href="#" class="hover:text-umber-900">Terms of Service</a>
+                    <a href="#" class="hover:text-umber-900">Ethical Sourcing Pledge</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal: Story / Guide Reading View -->
+    <div id="article-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-umber-950/70 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-cream-50 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-sand p-6 sm:p-8 shadow-2xl relative">
+            <button onclick="closeArticleModal()" class="absolute top-5 right-5 p-2 rounded-full hover:bg-sand/50 text-umber-800" aria-label="Close modal">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <span id="modal-category" class="text-xs font-bold tracking-widest uppercase text-terracotta-600">Brass &amp; Metal Accents</span>
+            <h3 id="modal-title" class="font-editorial text-2xl sm:text-3xl text-umber-900 font-medium mt-2 mb-4 leading-snug">
+                Article Title
+            </h3>
+            <div class="flex items-center gap-3 text-xs text-brass-600 mb-6 border-b border-sand pb-3">
+                <span id="modal-author">By Modern Desi Abode</span>
+                <span>&bull;</span>
+                <span id="modal-readtime">6 Min Read</span>
+            </div>
+
+            <div id="modal-content" class="text-umber-900/85 text-sm sm:text-base leading-relaxed space-y-4">
+                <!-- Dynamically injected -->
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-sand flex justify-end">
+                <button onclick="closeArticleModal()" class="px-6 py-2.5 rounded-full bg-umber-900 text-cream-50 text-xs font-semibold uppercase tracking-wider hover:bg-terracotta-600 transition-colors">
+                    Close Guide
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Artifact Styling Tips -->
+    <div id="styling-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-umber-950/70 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-cream-50 rounded-2xl max-w-md w-full border border-sand p-6 sm:p-7 shadow-2xl relative">
+            <button onclick="closeStylingModal()" class="absolute top-4 right-4 p-2 rounded-full hover:bg-sand/50 text-umber-800" aria-label="Close modal">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="w-10 h-10 rounded-xl bg-terracotta-500/10 flex items-center justify-center text-terracotta-600 mb-4">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </div>
+
+            <h4 class="text-xs font-bold uppercase tracking-widest text-brass-600">Curator's Styling Guide</h4>
+            <h3 id="styling-product-title" class="font-editorial text-2xl text-umber-900 font-semibold mt-1 mb-3">
+                Product Name
+            </h3>
+            <p id="styling-product-text" class="text-sm text-umber-800/80 leading-relaxed">
+                Styling tips details...
+            </p>
+
+            <div class="mt-6 pt-4 border-t border-sand flex justify-between items-center">
+                <span class="text-[11px] text-brass-600 font-semibold">Intentional &bull; Rooted</span>
+                <button onclick="closeStylingModal()" class="px-5 py-2 rounded-lg bg-umber-900 text-cream-50 text-xs font-semibold uppercase tracking-wider hover:bg-terracotta-600 transition-colors">
+                    Understood
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Lucide Icons
+        lucide.createIcons();
+
+        // 1. Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 2. Filter Logic for Stories & Styling Notes
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const articleCards = document.querySelectorAll('.article-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.getAttribute('data-category');
+
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-umber-900', 'text-cream-50', 'border-umber-900');
+                    b.classList.add('bg-cream-50', 'text-umber-800', 'border-sand');
+                });
+                btn.classList.add('bg-umber-900', 'text-cream-50', 'border-umber-900');
+                btn.classList.remove('bg-cream-50', 'text-umber-800', 'border-sand');
+
+                articleCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (category === 'all' || cardCategory === category) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 3. Concrete Indian Styling Stories Data
+        const articlesData = {
+            1: {
+                category: "Brass & Metal Accents",
+                title: "Styling an Antique Brass Urli in a Contemporary Foyer",
+                author: "By Ananya Mehta",
+                readTime: "6 Min Read",
+                content: `
+                    <p>In many Indian homes, the brass <em>Urli</em> (or uruli) only emerges during Diwali, heaped with flowers and surrounded by multiple diyas. But when treated as a permanent architectural vessel, it brings grounded serenity to modern foyers year-round.</p>
+                    <p class="font-semibold text-umber-950">How to avoid visual clutter:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Place on honest stone or oak:</strong> Set the brass bowl on an off-white travertine pedestal, fluted stone pillar, or raw matte white oak console. The contrast of warm burnished metal against cool stone prevents it from feeling ornate.</li>
+                        <li><strong>Restraint with florals:</strong> Rather than completely carpeting the water with petals, float just three to four fresh white gardenias or jasmine flowers with a single beeswax tea light. The negative space of clear water is what creates calm.</li>
+                        <li><strong>Embrace the unlacquered patina:</strong> Let the brass show its natural oxidized deep gold hue rather than polishing it to a mirror-like shine.</li>
+                    </ul>
+                `
+            },
+            2: {
+                category: "Rajasthani Wood & Inlay",
+                title: "Thikri Mirror Work & Carved Jharokhas on Modern Limewash",
+                author: "By Rohan Singhania",
+                readTime: "8 Min Read",
+                content: `
+                    <p><em>Thikri</em> (the traditional glass mosaic art of Rajasthan palaces) and hand-carved <em>Jharokhas</em> (oriel balcony windows) carry extraordinary craftsmanship. In an apartment or modern villa, the trick is letting the craftsmanship breathe.</p>
+                    <p class="font-semibold text-umber-950">Curating the Vignette:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Textured backdrop:</strong> Hang a reclaimed teak jharokha frame on an earthy lime-washed wall (sand, ecru, or soft bone). The organic chalky texture mirrors the historic stone forts of Jodhpur and Shekhawati.</li>
+                        <li><strong>No competing art:</strong> Give the piece at least two feet of clear wall on each side. A heritage jharokha is a sculptural window to the past—it shouldn't fight for attention with gallery wall prints.</li>
+                        <li><strong>Catch natural daylight:</strong> Angle Thikri mirror tablets so they catch low late-afternoon sunbeams, casting playful, jewel-like ambient reflections across modern ceilings.</li>
+                    </ul>
+                `
+            },
+            3: {
+                category: "Handloom & Textiles",
+                title: "Layering Sanganeri Block Prints with Modern Belgian Linen",
+                author: "By Priya Varma",
+                readTime: "10 Min Read",
+                content: `
+                    <p>Traditional Indian block prints from Bagru and Sanganer are masterclasses in botanical geometry. To prevent a modern room from looking like an ethnic souvenir shop, treat Indian block prints as accent accents over a neutral canvas.</p>
+                    <p class="font-semibold text-umber-950">The Harmonious Formula:</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Base on Belgian linen:</strong> Use heavy, undyed Belgian linen or oatmeal bouclé for your sofa or duvet cover.</li>
+                        <li><strong>Pick vegetable dyes:</strong> Opt for natural syahi (black iron rust), kashish (earthy taupe), and harda (warm mustard) prints rather than synthetic neon pigments.</li>
+                        <li><strong>Scale contrast:</strong> If your block print has fine, delicate botanical bootis, pair it with an oversized chunky knit or a heavy ribbed woolen throw for balance.</li>
+                    </ul>
+                `
+            }
+        };
+
+        const articleModal = document.getElementById('article-modal');
+        function openArticleModal(id) {
+            const data = articlesData[id];
+            if (!data) return;
+
+            document.getElementById('modal-category').innerText = data.category;
+            document.getElementById('modal-title').innerText = data.title;
+            document.getElementById('modal-author').innerText = data.author;
+            document.getElementById('modal-readtime').innerText = data.readTime;
+            document.getElementById('modal-content').innerHTML = data.content;
+
+            articleModal.classList.remove('hidden');
+            setTimeout(() => {
+                articleModal.classList.remove('opacity-0');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeArticleModal() {
+            articleModal.classList.add('opacity-0');
+            setTimeout(() => {
+                articleModal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // 4. Product Styling Tips Modal
+        const stylingModal = document.getElementById('styling-modal');
+        function showStylingTips(title, text) {
+            document.getElementById('styling-product-title').innerText = title;
+            document.getElementById('styling-product-text').innerText = text;
+
+            stylingModal.classList.remove('hidden');
+            setTimeout(() => {
+                stylingModal.classList.remove('opacity-0');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeStylingModal() {
+            stylingModal.classList.add('opacity-0');
+            setTimeout(() => {
+                stylingModal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        window.addEventListener('click', (e) => {
+            if (e.target === articleModal) closeArticleModal();
+            if (e.target === stylingModal) closeStylingModal();
+        });
+
+        // 5. Countdown Timer
+        const targetDate = new Date();
+        targetDate.setDate(targetDate.getDate() + 18);
+        targetDate.setHours(targetDate.getHours() + 9);
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) return;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown-days').innerText = String(days).padStart(2, '0');
+            document.getElementById('countdown-hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('countdown-minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('countdown-seconds').innerText = String(seconds).padStart(2, '0');
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // 6. Waitlist Form
+        function handleWaitlistSubmit(event) {
+            event.preventDefault();
+            const emailInput = document.getElementById('waitlist-email');
+            const feedback = document.getElementById('waitlist-feedback');
+            const submitBtn = document.getElementById('waitlist-submit-btn');
+
+            if (!emailInput.value) return;
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Securing Access...';
+
+            setTimeout(() => {
+                feedback.classList.remove('hidden');
+                feedback.innerHTML = `&check; Welcome! <strong>${emailInput.value}</strong> has been confirmed for the 24-hr advance Rajasthani Artisan Drop preview window.`;
+                emailInput.value = '';
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Early Access Reserved!';
+                submitBtn.classList.add('bg-emerald-700');
+            }, 750);
+        }
+
+        // 7. Newsletter Form
+        function handleNewsletterSubmit(event) {
+            event.preventDefault();
+            const emailInput = document.getElementById('newsletter-email');
+            const feedback = document.getElementById('newsletter-feedback');
+
+            if (!emailInput.value) return;
+
+            feedback.className = "text-xs py-2 px-4 rounded-full max-w-md mx-auto bg-sand/80 text-umber-900 border border-sand block mt-3";
+            feedback.innerHTML = `You're subscribed! Thank you for welcoming Modern Desi Abode into your slow Sunday routine.`;
+            emailInput.value = '';
+        }
+    </script>
+</body>
+</html>
